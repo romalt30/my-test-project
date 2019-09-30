@@ -6,6 +6,13 @@ script:
         - npm update
         - npm install jshint --save-dev
         - node_modules/.bin/jshint src
-        - npm install jsdoc
-        - node_modules/.bin/jsdoc src -d docs
-
+        
+        
+deploy:
+        local_dir: docs
+        provider: pages
+        skip_cleanup: true
+        github_token: $GITHUB_TOKEN
+        keep_history: true
+        on:
+                branch: master
