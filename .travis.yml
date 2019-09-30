@@ -4,4 +4,6 @@ node_js:
 script:
         - echo “toto”
         - npm update
+        - npm install jshint --save-dev
+        - node_modules/.bin/jshint src
 
